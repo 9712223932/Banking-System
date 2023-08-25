@@ -8,7 +8,7 @@ namespace BS.Model.Generic
 {
     public class Generics<T, Y>
     {
-        public T createdon { get; set; }
-        public Y Id { get; set; }
+        public T Id { get; set; }
+        public Y createdon { get; set; }
     }
 }

@@ -1,0 +1,12 @@
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\obj\Debug\BankingSystem.csproj.AssemblyReference.cache
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\obj\Debug\BankingSystem.csproj.CoreCompileInputs.cache
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\bin\Debug\BankingSystem.exe.config
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\bin\Debug\BankingSystem.exe
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\bin\Debug\BankingSystem.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\bin\Debug\BS.DataAccess.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\bin\Debug\BS.Model.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\bin\Debug\BS.DataAccess.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\bin\Debug\BS.Model.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\obj\Debug\BankingSystem.csproj.CopyComplete
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\obj\Debug\BankingSystem.exe
+D:\Baknig-System\Banking-System\ConsoleApp\BankingSystem\obj\Debug\BankingSystem.pdb

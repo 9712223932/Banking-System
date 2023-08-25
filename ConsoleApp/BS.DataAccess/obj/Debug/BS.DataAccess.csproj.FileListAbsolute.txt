@@ -4,3 +4,12 @@ C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\obj\Debug\BS.Data
 C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\obj\Debug\BS.DataAccess.dll
 C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\obj\Debug\BS.DataAccess.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\bin\Debug\BS.DataAccess.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\bin\Debug\BS.DataAccess.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\bin\Debug\BS.Model.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\bin\Debug\BS.Model.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.AssemblyReference.cache
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.CoreCompileInputs.cache
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.CopyComplete
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.pdb

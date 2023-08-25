@@ -1,0 +1,6 @@
+D:\Baknig-System\Banking-System\ConsoleApp\BS.Model\bin\Debug\BS.Model.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BS.Model\bin\Debug\BS.Model.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BS.Model\obj\Debug\BS.Model.csproj.AssemblyReference.cache
+D:\Baknig-System\Banking-System\ConsoleApp\BS.Model\obj\Debug\BS.Model.csproj.CoreCompileInputs.cache
+D:\Baknig-System\Banking-System\ConsoleApp\BS.Model\obj\Debug\BS.Model.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BS.Model\obj\Debug\BS.Model.pdb
