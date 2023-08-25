@@ -1,0 +1,6 @@
+C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\bin\Debug\BS.DataAccess.dll
+C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\bin\Debug\BS.DataAccess.pdb
+C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.AssemblyReference.cache
+C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\obj\Debug\BS.DataAccess.dll
+C:\Users\darshan.modi\source\repos\BankingSystem\BS.DataAccess\obj\Debug\BS.DataAccess.pdb
