@@ -102,9 +102,9 @@ namespace BS.DataAccess
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("@tid", SqlDbType.Int).Value = 0;
             cmd.Parameters.Add("@atvid", SqlDbType.Int).Value = 404;
-            cmd.Parameters.Add("@tamount", SqlDbType.Int).Value = 500;
+            cmd.Parameters.Add("@tamount", SqlDbType.Int).Value = 1000;
             cmd.Parameters.Add("@camid", SqlDbType.Int).Value = "209";
-            cmd.Parameters.Add("@OPType", SqlDbType.VarChar).Value = "I";
+            cmd.Parameters.Add("@OPType", SqlDbType.VarChar).Value = "U";
 
 
             sqlConnetion.Open();
