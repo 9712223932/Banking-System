@@ -17,11 +17,12 @@ namespace BankingSystem
         static void Main(string[] args)
         {
 
+            new BS.DataAccess.Class1().AllTablesetAccountorTransectionType();
             //new BS.DataAccess.Class1().InsertCustomerInformation();
             //new BS.DataAccess.Class1().InsertCustomerAccountManage();
             //new BS.DataAccess.Class1().InsertAccountorTransectionType();
             //new BS.DataAccess.Class1().InsertAccountorTransectionValue();
-            new BS.DataAccess.Class1().InsertTransection();
+            //new BS.DataAccess.Class1().InsertTransection();
 
             CustomerInformation objCustomerInformation = new CustomerInformation();
             objCustomerInformation.Id = 101;
