@@ -20,12 +20,15 @@ namespace BS.DataAccess
             string retriveQuery2 = "select *  from AccountorTransectionType";
             string retriveQuery3 = "select *  from AccountorTransectionValue";
             string retriveQuery4 = "select *  from Transection";
+            string retriveQuery5 = "select *  from CreditCardDetail";
+
 
             SqlCommand cmd = new SqlCommand(retriveQuery, sqlConnetion);
             SqlCommand cmd1 = new SqlCommand(retriveQuery1, sqlConnetion);
             SqlCommand cmd2 = new SqlCommand(retriveQuery2, sqlConnetion);
             SqlCommand cmd3 = new SqlCommand(retriveQuery3, sqlConnetion);
             SqlCommand cmd4 = new SqlCommand(retriveQuery4, sqlConnetion);
+            SqlCommand cmd5 = new SqlCommand(retriveQuery5, sqlConnetion);
 
             sqlConnetion.Open();
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -44,6 +47,7 @@ namespace BS.DataAccess
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
             SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
+            SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
 
 
             DataSet ds = new DataSet();
@@ -52,6 +56,7 @@ namespace BS.DataAccess
             da2.Fill(ds, "AccountorTransectionType");
             da3.Fill(ds, "AccountorTransectionValue");
             da4.Fill(ds, "Transection");
+            da5.Fill(ds, "CreditCardDetail");
 
             /*ds.Tables.Add("CustomerInformation");
              ds.Tables.Add("CustomerAccountManage");
@@ -88,6 +93,12 @@ namespace BS.DataAccess
             foreach (DataRow row in ds.Tables["Transection"].Rows)
             {
                 Console.WriteLine("{0}{1}{2}{3}", row["TransectionId"] + "\t", row["TransectionType"] + "\t", row["TransectionAmmount"] + "\t", row["CustomerAccountManageId"] + "\t", row["CreatedOn"]);
+            }
+
+            Console.WriteLine("\n" + "CreditCardDetail Using Data Set");
+            foreach (DataRow row in ds.Tables["CreditCardDetail"].Rows)
+            {
+                Console.WriteLine("{0}{1}{2}{3}", row["CreditCardDetailId"] + "\t", row["CardNumber"] + "\t", row["createdon"] + "\t", row["CardLimit"] + "\t", row["CustomerAccountManageId"]);
             }
 
 
