@@ -9,7 +9,10 @@ namespace BS.Model
 {
     public class Transection : Generics<int, DateTime>
     {
-        public int transectionType { get; set; }
-        public long transectionAmmount { get; set; }
+        public int TransectionType { get; set; }
+        public long TransectionAmmount { get; set; }
+        public int TransectionMethod { get; set; }
+        public int CustomerAccountManageId { get; set; }
+
     }
 }

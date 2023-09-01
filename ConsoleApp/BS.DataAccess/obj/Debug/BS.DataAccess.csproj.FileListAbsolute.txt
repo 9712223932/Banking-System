@@ -13,3 +13,12 @@ D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess
 D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.CopyComplete
 D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.dll
 D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.pdb
+D:\Banking-System\ConsoleApp\BS.DataAccess\bin\Debug\BS.DataAccess.dll
+D:\Banking-System\ConsoleApp\BS.DataAccess\bin\Debug\BS.DataAccess.pdb
+D:\Banking-System\ConsoleApp\BS.DataAccess\bin\Debug\BS.Model.dll
+D:\Banking-System\ConsoleApp\BS.DataAccess\bin\Debug\BS.Model.pdb
+D:\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.AssemblyReference.cache
+D:\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.CoreCompileInputs.cache
+D:\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.csproj.CopyComplete
+D:\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.dll
+D:\Banking-System\ConsoleApp\BS.DataAccess\obj\Debug\BS.DataAccess.pdb

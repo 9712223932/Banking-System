@@ -9,11 +9,10 @@ namespace BS.Model
 {
     public class CustomerAccountManage : Generics<int, DateTime>
     {
-        public long accountNumber { get; set; }
-        public int accountType { get; set; }
-        public long accountBalance { get; set; }
-        public string branch { get; set; }
-        public string ifscCode { get; set; }
-        public int customerInformationId { get; set; }
+        public long AccountNumber { get; set; }
+        public int AccountType { get; set; }
+        public long AccountBalance { get; set; }
+        public int BranchId { get; set; }
+        public int CustomerInformationId { get; set; }
     }
 }

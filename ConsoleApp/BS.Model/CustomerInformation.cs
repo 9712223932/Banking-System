@@ -10,9 +10,9 @@ namespace BS.Model
 {
     public class CustomerInformation : Generics<int, DateTime>
     {
-        public string customerName { get; set; }
-        public long customerMobileNumber { get; set; }
-        public string customerAddress { get; set; }      
+        public string CustomerName { get; set; }
+        public long CustomerMobileNumber { get; set; }
+        public string CustomerAddress { get; set; }      
 
     }
 }
