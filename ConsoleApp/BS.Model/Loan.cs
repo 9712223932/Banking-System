@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace BS.Model
 {
-    public class Loan : Generics<int, DateTime>
+    public class Loan : Generics<DateTime>
     {
+        public  int LoanId { get; set; }
         public  int LoanType { get; set; }
         public  int LoanNumber { get; set; }
         public  int IssuedLoanAmount { get; set; }

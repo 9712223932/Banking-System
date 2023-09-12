@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace BS.Model
 {
-    public class Branch :Generics<int,DateTime>
+    public class Branch :Generics<DateTime>
     {
+        public int BranchId { get; set; }
         public string BranchName { get; set; }
         public string BranchAddress { get; set; }
         public string BranchIFSC { get; set; }

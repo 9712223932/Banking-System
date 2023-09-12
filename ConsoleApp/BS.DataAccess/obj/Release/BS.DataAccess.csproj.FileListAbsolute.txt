@@ -1,0 +1,9 @@
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\bin\Release\BS.DataAccess.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\bin\Release\BS.DataAccess.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\bin\Release\BS.Model.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\bin\Release\BS.Model.pdb
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Release\BS.DataAccess.csproj.AssemblyReference.cache
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Release\BS.DataAccess.csproj.CoreCompileInputs.cache
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Release\BS.DataAccess.csproj.CopyComplete
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Release\BS.DataAccess.dll
+D:\Baknig-System\Banking-System\ConsoleApp\BS.DataAccess\obj\Release\BS.DataAccess.pdb

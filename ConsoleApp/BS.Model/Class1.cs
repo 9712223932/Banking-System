@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace BS.Model
 {
     public class Class1
-    {
+    {  
        
     }
 }

@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace BS.Model
 {
-    public class CreditCardDetail : Generics<int, DateTime>
+    public class CreditCardDetail : Generics<DateTime>
     {
+        public int CreditCardDetailId { get; set; }
         public int CardNumber { get; set; }
         public int CardLimit { get; set; }
-        public int CustomerAccountManageId { get; set; }
+        public int CustomerInformationId { get; set; }
     }
 }

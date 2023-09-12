@@ -43,7 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Class1Base.cs" />
+    <Compile Include="ConnectionString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repeater1.cs" />
+    <Compile Include="sqlcommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BS.Model\BS.Model.csproj">

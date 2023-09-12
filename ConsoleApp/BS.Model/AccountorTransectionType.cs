@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace BS.Model
 {
-    public class AccountorTransectionType : Generics<int,DateTime>
+    public class AccountorTransectionType : Generics<DateTime>
     {
+        public int AccountorTransectionTypeId { get; set; }
         public string AccountorTransectionTypeName { get; set; }
     }
 }

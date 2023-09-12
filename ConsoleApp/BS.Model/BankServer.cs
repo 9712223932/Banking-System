@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace BS.Model
 {
-    public class BankServer : Generics<int, DateTime>
+    public class BankServer : Generics<DateTime>
     {
+        public int BankServerId { get; set; }
         public int CustomerAccountManageId { get; set; }
         public int TransectionId { get; set; }
         public int CreditCardDetailID { get; set; }

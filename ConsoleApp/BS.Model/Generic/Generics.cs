@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace BS.Model.Generic
 {
-    public class Generics<T, Y>
+    public class Generics<Y>
     {
-        public T Id { get; set; }
         public Y createdon { get; set; }        
     }
 }
