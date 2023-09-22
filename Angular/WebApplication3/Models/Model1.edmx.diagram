@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ea893def7e1944ecba99445324ddf159" Name="Diagram1">
+        <EntityTypeShape EntityType="BankingSystemModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.AccountorTransectionType" Width="1.5" PointX="3.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.AccountorTransectionValue" Width="1.5" PointX="6" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.Bank" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.BankServer" Width="1.5" PointX="10.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.Branch" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.CreditCardDetail" Width="1.5" PointX="8.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.CustomerAccountManage" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.CustomerInformation" Width="1.5" PointX="3.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.Loan" Width="1.5" PointX="8.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.LoanPayment" Width="1.5" PointX="10.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankingSystemModel.Transection" Width="1.5" PointX="8.25" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="BankingSystemModel.FK__Accountor__Accou__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__Transecti__Trans__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__Transecti__Trans__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__Bank__BranchId__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__BankServe__Credi__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__BankServe__Custo__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__BankServe__LoanI__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__BankServe__Trans__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__CustomerA__Branc__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__CreditCar__Custo__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__CustomerA__Custo__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__Loan__CustomerAc__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__Transecti__Custo__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="BankingSystemModel.FK__LoanPayme__LoanI__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

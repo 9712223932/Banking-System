@@ -1,0 +1,31 @@
+﻿@model List<WebApplication3.Models.CustomerInformation>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List OF ALL Customers</h2>
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>CustomerInformationId</th>
+        <th>CustomerName</th>
+        <th>CustomerMobileNumber</th>
+        <th>CustomerAddress</th>
+        <th>CustomerEmail</th>
+        <th>CustomerPassword</th>
+        <th>CreatedOn</th>
+    </tr>
+    @foreach (var item in Model)
+     {
+        <tr>
+            <td>@item.CustomerInformationId</td>
+            <td>@item.CustomerName</td>
+            <td>@item.CustomerMobileNumber</td>
+            <td>@item.CustomerAddress</td>
+            <td>@item.CustomerEmail</td>
+            <td>@item.CustomerPassword</td>
+            <td>@item.CreatedOn</td>
+        </tr>
+     }
+    
+</table>
+

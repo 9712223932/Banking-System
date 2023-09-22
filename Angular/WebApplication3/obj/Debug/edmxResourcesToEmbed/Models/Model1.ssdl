@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankingSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountorTransectionType">
+    <Key>
+      <PropertyRef Name="AccountorTransectionTypeId" />
+    </Key>
+    <Property Name="AccountorTransectionTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountorTransectionTypeName" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AccountorTransectionValue">
+    <Key>
+      <PropertyRef Name="AccountorTransectionValueId" />
+    </Key>
+    <Property Name="AccountorTransectionValueId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountorTransectionValueName" Type="varchar" MaxLength="20" />
+    <Property Name="AccountorTransectionTypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="BankID" />
+    </Key>
+    <Property Name="BankID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankerName" Type="varchar" MaxLength="20" />
+    <Property Name="BranchId" Type="int" />
+  </EntityType>
+  <EntityType Name="BankServer">
+    <Key>
+      <PropertyRef Name="BankServerId" />
+    </Key>
+    <Property Name="BankServerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerAccountManageId" Type="int" />
+    <Property Name="TransectionId" Type="int" />
+    <Property Name="CreditCardDetailID" Type="int" />
+    <Property Name="LoanID" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="BranchId" />
+    </Key>
+    <Property Name="BranchId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchName" Type="varchar" MaxLength="20" />
+    <Property Name="BranchAddress" Type="varchar" MaxLength="20" />
+    <Property Name="BranchIFSC" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CreditCardDetail">
+    <Key>
+      <PropertyRef Name="CreditCardDetailID" />
+    </Key>
+    <Property Name="CreditCardDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardNumber" Type="int" />
+    <Property Name="Expirydate" Type="datetime" />
+    <Property Name="CardLimit" Type="int" />
+    <Property Name="CustomerInformationId" Type="int" />
+  </EntityType>
+  <EntityType Name="CustomerAccountManage">
+    <Key>
+      <PropertyRef Name="CustomerAccountManageId" />
+    </Key>
+    <Property Name="CustomerAccountManageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountNumber" Type="int" />
+    <Property Name="AccountType" Type="int" />
+    <Property Name="AccountBalance" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="CustomerInformationId" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CustomerInformation">
+    <Key>
+      <PropertyRef Name="CustomerInformationId" />
+    </Key>
+    <Property Name="CustomerInformationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="20" />
+    <Property Name="CustomerMobileNumber" Type="bigint" />
+    <Property Name="CustomerAddress" Type="varchar" MaxLength="20" />
+    <Property Name="CustomerEmail" Type="varchar" MaxLength="40" />
+    <Property Name="CustomerPassword" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Loan">
+    <Key>
+      <PropertyRef Name="LoanID" />
+    </Key>
+    <Property Name="LoanID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanType" Type="int" />
+    <Property Name="LoanNumber" Type="int" />
+    <Property Name="IssuedLoanAmount" Type="int" />
+    <Property Name="RemainingLoanAmmount" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="CustomerAccountManageId" Type="int" />
+  </EntityType>
+  <EntityType Name="LoanPayment">
+    <Key>
+      <PropertyRef Name="LoanPaymentID" />
+    </Key>
+    <Property Name="LoanPaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentAmount" Type="int" />
+    <Property Name="LoanID" Type="int" />
+  </EntityType>
+  <EntityType Name="Transection">
+    <Key>
+      <PropertyRef Name="TransectionId" />
+    </Key>
+    <Property Name="TransectionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransectionType" Type="int" />
+    <Property Name="TransectionAmmount" Type="int" />
+    <Property Name="TransectionMethod" Type="int" />
+    <Property Name="CustomerAccountManageId" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Accountor__Accou__300424B4">
+    <End Role="AccountorTransectionType" Type="Self.AccountorTransectionType" Multiplicity="0..1" />
+    <End Role="AccountorTransectionValue" Type="Self.AccountorTransectionValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountorTransectionType">
+        <PropertyRef Name="AccountorTransectionTypeId" />
+      </Principal>
+      <Dependent Role="AccountorTransectionValue">
+        <PropertyRef Name="AccountorTransectionTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bank__BranchId__286302EC">
+    <End Role="Branch" Type="Self.Branch" Multiplicity="0..1" />
+    <End Role="Bank" Type="Self.Bank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch">
+        <PropertyRef Name="BranchId" />
+      </Principal>
+      <Dependent Role="Bank">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BankServe__Credi__44FF419A">
+    <End Role="CreditCardDetail" Type="Self.CreditCardDetail" Multiplicity="0..1" />
+    <End Role="BankServer" Type="Self.BankServer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CreditCardDetail">
+        <PropertyRef Name="CreditCardDetailID" />
+      </Principal>
+      <Dependent Role="BankServer">
+        <PropertyRef Name="CreditCardDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BankServe__Custo__4316F928">
+    <End Role="CustomerAccountManage" Type="Self.CustomerAccountManage" Multiplicity="0..1" />
+    <End Role="BankServer" Type="Self.BankServer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerAccountManage">
+        <PropertyRef Name="CustomerAccountManageId" />
+      </Principal>
+      <Dependent Role="BankServer">
+        <PropertyRef Name="CustomerAccountManageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BankServe__LoanI__45F365D3">
+    <End Role="Loan" Type="Self.Loan" Multiplicity="0..1" />
+    <End Role="BankServer" Type="Self.BankServer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loan">
+        <PropertyRef Name="LoanID" />
+      </Principal>
+      <Dependent Role="BankServer">
+        <PropertyRef Name="LoanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BankServe__Trans__440B1D61">
+    <End Role="Transection" Type="Self.Transection" Multiplicity="0..1" />
+    <End Role="BankServer" Type="Self.BankServer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transection">
+        <PropertyRef Name="TransectionId" />
+      </Principal>
+      <Dependent Role="BankServer">
+        <PropertyRef Name="TransectionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CreditCar__Custo__2B3F6F97">
+    <End Role="CustomerInformation" Type="Self.CustomerInformation" Multiplicity="0..1" />
+    <End Role="CreditCardDetail" Type="Self.CreditCardDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerInformation">
+        <PropertyRef Name="CustomerInformationId" />
+      </Principal>
+      <Dependent Role="CreditCardDetail">
+        <PropertyRef Name="CustomerInformationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerA__Branc__32E0915F">
+    <End Role="Branch" Type="Self.Branch" Multiplicity="0..1" />
+    <End Role="CustomerAccountManage" Type="Self.CustomerAccountManage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch">
+        <PropertyRef Name="BranchId" />
+      </Principal>
+      <Dependent Role="CustomerAccountManage">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerA__Custo__33D4B598">
+    <End Role="CustomerInformation" Type="Self.CustomerInformation" Multiplicity="0..1" />
+    <End Role="CustomerAccountManage" Type="Self.CustomerAccountManage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerInformation">
+        <PropertyRef Name="CustomerInformationId" />
+      </Principal>
+      <Dependent Role="CustomerAccountManage">
+        <PropertyRef Name="CustomerInformationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Loan__CustomerAc__3D5E1FD2">
+    <End Role="CustomerAccountManage" Type="Self.CustomerAccountManage" Multiplicity="0..1" />
+    <End Role="Loan" Type="Self.Loan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerAccountManage">
+        <PropertyRef Name="CustomerAccountManageId" />
+      </Principal>
+      <Dependent Role="Loan">
+        <PropertyRef Name="CustomerAccountManageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LoanPayme__LoanI__403A8C7D">
+    <End Role="Loan" Type="Self.Loan" Multiplicity="0..1" />
+    <End Role="LoanPayment" Type="Self.LoanPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loan">
+        <PropertyRef Name="LoanID" />
+      </Principal>
+      <Dependent Role="LoanPayment">
+        <PropertyRef Name="LoanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transecti__Custo__398D8EEE">
+    <End Role="CustomerAccountManage" Type="Self.CustomerAccountManage" Multiplicity="0..1" />
+    <End Role="Transection" Type="Self.Transection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerAccountManage">
+        <PropertyRef Name="CustomerAccountManageId" />
+      </Principal>
+      <Dependent Role="Transection">
+        <PropertyRef Name="CustomerAccountManageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transecti__Trans__37A5467C">
+    <End Role="AccountorTransectionValue" Type="Self.AccountorTransectionValue" Multiplicity="0..1" />
+    <End Role="Transection" Type="Self.Transection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountorTransectionValue">
+        <PropertyRef Name="AccountorTransectionValueId" />
+      </Principal>
+      <Dependent Role="Transection">
+        <PropertyRef Name="TransectionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transecti__Trans__38996AB5">
+    <End Role="AccountorTransectionValue" Type="Self.AccountorTransectionValue" Multiplicity="0..1" />
+    <End Role="Transection" Type="Self.Transection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountorTransectionValue">
+        <PropertyRef Name="AccountorTransectionValueId" />
+      </Principal>
+      <Dependent Role="Transection">
+        <PropertyRef Name="TransectionMethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BankingSystemModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccountorTransectionType" EntityType="Self.AccountorTransectionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccountorTransectionValue" EntityType="Self.AccountorTransectionValue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bank" EntityType="Self.Bank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BankServer" EntityType="Self.BankServer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Branch" EntityType="Self.Branch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CreditCardDetail" EntityType="Self.CreditCardDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerAccountManage" EntityType="Self.CustomerAccountManage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerInformation" EntityType="Self.CustomerInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loan" EntityType="Self.Loan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoanPayment" EntityType="Self.LoanPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transection" EntityType="Self.Transection" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Accountor__Accou__300424B4" Association="Self.FK__Accountor__Accou__300424B4">
+      <End Role="AccountorTransectionType" EntitySet="AccountorTransectionType" />
+      <End Role="AccountorTransectionValue" EntitySet="AccountorTransectionValue" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bank__BranchId__286302EC" Association="Self.FK__Bank__BranchId__286302EC">
+      <End Role="Branch" EntitySet="Branch" />
+      <End Role="Bank" EntitySet="Bank" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BankServe__Credi__44FF419A" Association="Self.FK__BankServe__Credi__44FF419A">
+      <End Role="CreditCardDetail" EntitySet="CreditCardDetail" />
+      <End Role="BankServer" EntitySet="BankServer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BankServe__Custo__4316F928" Association="Self.FK__BankServe__Custo__4316F928">
+      <End Role="CustomerAccountManage" EntitySet="CustomerAccountManage" />
+      <End Role="BankServer" EntitySet="BankServer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BankServe__LoanI__45F365D3" Association="Self.FK__BankServe__LoanI__45F365D3">
+      <End Role="Loan" EntitySet="Loan" />
+      <End Role="BankServer" EntitySet="BankServer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BankServe__Trans__440B1D61" Association="Self.FK__BankServe__Trans__440B1D61">
+      <End Role="Transection" EntitySet="Transection" />
+      <End Role="BankServer" EntitySet="BankServer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CreditCar__Custo__2B3F6F97" Association="Self.FK__CreditCar__Custo__2B3F6F97">
+      <End Role="CustomerInformation" EntitySet="CustomerInformation" />
+      <End Role="CreditCardDetail" EntitySet="CreditCardDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerA__Branc__32E0915F" Association="Self.FK__CustomerA__Branc__32E0915F">
+      <End Role="Branch" EntitySet="Branch" />
+      <End Role="CustomerAccountManage" EntitySet="CustomerAccountManage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerA__Custo__33D4B598" Association="Self.FK__CustomerA__Custo__33D4B598">
+      <End Role="CustomerInformation" EntitySet="CustomerInformation" />
+      <End Role="CustomerAccountManage" EntitySet="CustomerAccountManage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Loan__CustomerAc__3D5E1FD2" Association="Self.FK__Loan__CustomerAc__3D5E1FD2">
+      <End Role="CustomerAccountManage" EntitySet="CustomerAccountManage" />
+      <End Role="Loan" EntitySet="Loan" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoanPayme__LoanI__403A8C7D" Association="Self.FK__LoanPayme__LoanI__403A8C7D">
+      <End Role="Loan" EntitySet="Loan" />
+      <End Role="LoanPayment" EntitySet="LoanPayment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transecti__Custo__398D8EEE" Association="Self.FK__Transecti__Custo__398D8EEE">
+      <End Role="CustomerAccountManage" EntitySet="CustomerAccountManage" />
+      <End Role="Transection" EntitySet="Transection" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transecti__Trans__37A5467C" Association="Self.FK__Transecti__Trans__37A5467C">
+      <End Role="AccountorTransectionValue" EntitySet="AccountorTransectionValue" />
+      <End Role="Transection" EntitySet="Transection" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transecti__Trans__38996AB5" Association="Self.FK__Transecti__Trans__38996AB5">
+      <End Role="AccountorTransectionValue" EntitySet="AccountorTransectionValue" />
+      <End Role="Transection" EntitySet="Transection" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

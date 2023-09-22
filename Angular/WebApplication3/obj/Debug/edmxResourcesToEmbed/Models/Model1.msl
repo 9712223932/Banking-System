@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BankingSystemModelStoreContainer" CdmEntityContainer="BankingSystemEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="BankingSystemModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountorTransectionTypes">
+      <EntityTypeMapping TypeName="BankingSystemModel.AccountorTransectionType">
+        <MappingFragment StoreEntitySet="AccountorTransectionType">
+          <ScalarProperty Name="AccountorTransectionTypeId" ColumnName="AccountorTransectionTypeId" />
+          <ScalarProperty Name="AccountorTransectionTypeName" ColumnName="AccountorTransectionTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountorTransectionValues">
+      <EntityTypeMapping TypeName="BankingSystemModel.AccountorTransectionValue">
+        <MappingFragment StoreEntitySet="AccountorTransectionValue">
+          <ScalarProperty Name="AccountorTransectionValueId" ColumnName="AccountorTransectionValueId" />
+          <ScalarProperty Name="AccountorTransectionValueName" ColumnName="AccountorTransectionValueName" />
+          <ScalarProperty Name="AccountorTransectionTypeId" ColumnName="AccountorTransectionTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="BankingSystemModel.Bank">
+        <MappingFragment StoreEntitySet="Bank">
+          <ScalarProperty Name="BankID" ColumnName="BankID" />
+          <ScalarProperty Name="BankerName" ColumnName="BankerName" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankServers">
+      <EntityTypeMapping TypeName="BankingSystemModel.BankServer">
+        <MappingFragment StoreEntitySet="BankServer">
+          <ScalarProperty Name="BankServerId" ColumnName="BankServerId" />
+          <ScalarProperty Name="CustomerAccountManageId" ColumnName="CustomerAccountManageId" />
+          <ScalarProperty Name="TransectionId" ColumnName="TransectionId" />
+          <ScalarProperty Name="CreditCardDetailID" ColumnName="CreditCardDetailID" />
+          <ScalarProperty Name="LoanID" ColumnName="LoanID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="BankingSystemModel.Branch">
+        <MappingFragment StoreEntitySet="Branch">
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="BranchAddress" ColumnName="BranchAddress" />
+          <ScalarProperty Name="BranchIFSC" ColumnName="BranchIFSC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditCardDetails">
+      <EntityTypeMapping TypeName="BankingSystemModel.CreditCardDetail">
+        <MappingFragment StoreEntitySet="CreditCardDetail">
+          <ScalarProperty Name="CreditCardDetailID" ColumnName="CreditCardDetailID" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+          <ScalarProperty Name="CardLimit" ColumnName="CardLimit" />
+          <ScalarProperty Name="CustomerInformationId" ColumnName="CustomerInformationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerAccountManages">
+      <EntityTypeMapping TypeName="BankingSystemModel.CustomerAccountManage">
+        <MappingFragment StoreEntitySet="CustomerAccountManage">
+          <ScalarProperty Name="CustomerAccountManageId" ColumnName="CustomerAccountManageId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="AccountBalance" ColumnName="AccountBalance" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="CustomerInformationId" ColumnName="CustomerInformationId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerInformations">
+      <EntityTypeMapping TypeName="BankingSystemModel.CustomerInformation">
+        <MappingFragment StoreEntitySet="CustomerInformation">
+          <ScalarProperty Name="CustomerInformationId" ColumnName="CustomerInformationId" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerMobileNumber" ColumnName="CustomerMobileNumber" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+          <ScalarProperty Name="CustomerPassword" ColumnName="CustomerPassword" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loans">
+      <EntityTypeMapping TypeName="BankingSystemModel.Loan">
+        <MappingFragment StoreEntitySet="Loan">
+          <ScalarProperty Name="LoanID" ColumnName="LoanID" />
+          <ScalarProperty Name="LoanType" ColumnName="LoanType" />
+          <ScalarProperty Name="LoanNumber" ColumnName="LoanNumber" />
+          <ScalarProperty Name="IssuedLoanAmount" ColumnName="IssuedLoanAmount" />
+          <ScalarProperty Name="RemainingLoanAmmount" ColumnName="RemainingLoanAmmount" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="CustomerAccountManageId" ColumnName="CustomerAccountManageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanPayments">
+      <EntityTypeMapping TypeName="BankingSystemModel.LoanPayment">
+        <MappingFragment StoreEntitySet="LoanPayment">
+          <ScalarProperty Name="LoanPaymentID" ColumnName="LoanPaymentID" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="LoanID" ColumnName="LoanID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transections">
+      <EntityTypeMapping TypeName="BankingSystemModel.Transection">
+        <MappingFragment StoreEntitySet="Transection">
+          <ScalarProperty Name="TransectionId" ColumnName="TransectionId" />
+          <ScalarProperty Name="TransectionType" ColumnName="TransectionType" />
+          <ScalarProperty Name="TransectionAmmount" ColumnName="TransectionAmmount" />
+          <ScalarProperty Name="TransectionMethod" ColumnName="TransectionMethod" />
+          <ScalarProperty Name="CustomerAccountManageId" ColumnName="CustomerAccountManageId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
